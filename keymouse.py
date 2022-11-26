@@ -162,10 +162,10 @@ VK_CODE = {
 
 
 def _key_up(key): 
-    driver.KeyDown(VK_CODE[key])
+    driver.KeyUp(VK_CODE[key])
 
 def _key_down(key): 
-    driver.KeyUp(VK_CODE[key])
+    driver.KeyDown(VK_CODE[key])
 
 def _left_button_down():
     driver.MouseLeftButtonDown()
@@ -194,6 +194,7 @@ def _move_to(x, y):
 def load_driver():
     global driver
     driver = CDLL(c.kmclass_dll_path)
+    #os.add_dll_directory(directory_path)
     driver.LoadNTDriver(c.driver_name,bytes(c.kmclass_driver_path,encoding="utf8"))
     driver.SetHandle()
 
