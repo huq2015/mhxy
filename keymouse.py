@@ -194,8 +194,8 @@ def _move_to(x, y):
 def load_driver():
     global driver
     driver = CDLL(c.kmclass_dll_path)
-    #os.add_dll_directory(directory_path)
-    driver.LoadNTDriver(c.driver_name,bytes(c.kmclass_driver_path,encoding="utf8"))
+    # 驱动初次加载后后续就不用加载了
+    #driver.LoadNTDriver(c.driver_name,bytes(c.kmclass_driver_path,encoding="utf8"))
     driver.SetHandle()
 
 def unload_driver():
