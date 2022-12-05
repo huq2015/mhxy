@@ -70,4 +70,5 @@ if args.learn:
 
 
 if __name__ == '__main__':
+    #auto_click()
     print('Bye~')

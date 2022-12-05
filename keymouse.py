@@ -162,10 +162,10 @@ VK_CODE = {
 
 
 def _key_up(key): 
-    driver.KeyDown(VK_CODE[key])
+    driver.KeyUp(VK_CODE[key])
 
 def _key_down(key): 
-    driver.KeyUp(VK_CODE[key])
+    driver.KeyDown(VK_CODE[key])
 
 def _left_button_down():
     driver.MouseLeftButtonDown()

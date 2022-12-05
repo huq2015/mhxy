@@ -3,7 +3,7 @@
 ####    图片处理相关   ####
 ##########################
 
-import win32gui
+from win32 import win32gui
 import shutil
 import io
 import sys

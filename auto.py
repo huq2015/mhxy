@@ -46,4 +46,4 @@ def move_rel(x,y):
 
 if __name__ == '__main__':
     open_driver()
-    move_to_click(341,437)
+    move_to_click(650,1050)
